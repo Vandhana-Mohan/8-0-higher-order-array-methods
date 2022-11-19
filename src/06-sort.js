@@ -17,6 +17,7 @@
 
   // -------------  sorts array ascending - one liner - uses sort & Arrow function -----------------
   // a,b => a - b == sorts in ascending order
+
   const sortByRuntimeAscending = (songs) => songs.sort((a,b) => a.runtimeInSeconds - b. runtimeInSeconds)
 
 
@@ -34,7 +35,7 @@
  // b.toLowerCase() - a.toLowerCase() ? 1 : -1 == converts all string to lowercase and then compares. If value is greater, then 1, that means its sorted in descending order
  // we can also use .LocaleCompare() which i have used for next question
 
- const sortByArtistNameDescending = ((songs) => songs.sort((a, b) => b.artist.toLowerCase() > a.artist.toLowerCase() ? 1 : -1))
+ const sortByArtistNameDescending = (songs) => songs.sort( (a, b) => b.artist.toLowerCase() > a.artist.toLowerCase() ? 1 : -1 )
 
 
 /**
@@ -49,7 +50,7 @@
 
 
  // -------------  sorts song title in ascending - one liner - uses sort & Arrow function -----------------
- // Here we use .LocaleCompare() which compares ASCII value before sorting.
+ // Here we use .LocaleCompare() which compares ASCII value before sorting. - localeCompare is mainly used for non english characters
  // Used an alternative for previous function to show variation - both method works
 
  const sortBySongTitleAscending = (songs) => songs.sort((a, b) => a.title.localeCompare(b.title))
