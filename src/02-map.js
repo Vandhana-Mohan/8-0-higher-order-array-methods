@@ -17,7 +17,8 @@ const exampleSongData = require("../data/songs");
 
 // -------------  returns all song title - one liner - uses map & Arrow function -----------------
 
-const getSongTitles = (songs) => songs.map( item => item.title )
+const getSongTitles = (songs) => songs.map( song => song.title)
+
 
 /**
  * Returns an array of all of the song titles with the artist.
@@ -32,7 +33,7 @@ const getSongTitles = (songs) => songs.map( item => item.title )
 
 // -------------  returns song title by artist - one liner - uses map & Arrow function -----------------
 
-const getSongDetails = (songs) => songs.map( item => `${item.title} by ${item.artist}` )
+const getSongDetails = (songs) => songs.map( song => `${song.title} by ${song.artist}` )
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
@@ -47,7 +48,7 @@ const getSongDetails = (songs) => songs.map( item => `${item.title} by ${item.ar
 
 // -------------  returns object with song title as key - one liner - uses map & Arrow function -----------------
 
-const getTitleAndArtist = (songs) => songs.map( item => { return { [ item.title ] : item.artist } } )
+const getTitleAndArtist = (songs) => songs.map( item =>  ({ [ item.title ] : item.artist } ))
 
 
 module.exports = {
